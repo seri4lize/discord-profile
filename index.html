@@ -1,0 +1,213 @@
+<body>
+  <div class="profile">
+    <div class="profile-header">
+      <img src="assets/redfox.gif" class="profile-banner" />
+    </div>
+    <div class="content">
+      <img class="profile-photo" src="assets/profile.png" width="100%" />
+      <div class="status-dnd"></div>
+      <div class="badges">
+        <img class="badge" src="assets/hypebrilliance.png" />
+        <img class="badge" src="assets/activedev.png" />
+        <img class="badge" src="assets/nitro.png" />
+      </div>
+      <div class="user-info">
+        <h4 class="username">seri4lize</h4>
+        <p class="user-status">seri4lize ・ bye bye</p>
+        <p class="content">
+          <b>Founder at RedFox</b>
+          <br />
+          <a href="https://discord.gg/7X2uTetsud"
+            >https://discord.gg/7X2uTetsud</a
+          ><br />
+        </p>
+        <button class="emoji">
+          <img src="assets/emoji.png" alt="" />
+        </button>
+        <textarea
+          placeholder="Message @seri4lize"
+          class="message-content"
+          type="text"
+          onkeypress="this.value = this.value.substring(0,256);"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+</body>
+<style>
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: "UniSansSemiBold";
+    src: url(https://github.com/Experience-Monks/MatrixBuilder/blob/master/app/assets/fonts/uni/uni-sans-semi-bold-webfont.woff)
+      format("woff");
+  }
+  :root {
+    --ui-bg: #313338;
+    --ui-profile-bg: #111214;
+    --badge-bg: #222427;
+    --profile-shadow: rgba(0, 0, 0, 0.1);
+    --ui-status-dnd: #ed4245;
+  }
+
+  body {
+    background: rgb(17, 18, 20);
+    background: linear-gradient(
+      0deg,
+      rgba(17, 18, 20, 1) 0%,
+      rgba(49, 51, 56, 1) 100%
+    );
+    overflow-y: hidden;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "UniSansSemiBold", sans-serif;
+  }
+  .profile {
+    background: var(--ui-profile-bg);
+    border-radius: 20px;
+    min-height: 400px;
+    min-width: 300px;
+    margin: 8% auto;
+    height: 430px;
+    width: 350px;
+    position: fixed;
+    justify-content: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .profile-header {
+    border-radius: 10px 10px 0 0;
+    height: 120px;
+    width: 100%;
+  }
+  .profile-banner {
+    border-radius: 10px 10px 0 0;
+    height: 140%;
+    width: 100%;
+  }
+  .content {
+    position: relative;
+  }
+  .profile-photo {
+    border: 6px solid var(--ui-profile-bg);
+    border-radius: 50%;
+    margin: -45px 20px;
+    margin-top: 1%;
+    width: 100px;
+    height: 100px;
+    z-index: -9;
+    float: left;
+  }
+  p.user-status {
+    margin-left: -10px;
+  }
+  .status-dnd {
+    background: var(--ui-status-dnd);
+    border: 6px solid var(--ui-profile-bg);
+    border-radius: 50%;
+    margin: 20px -53px;
+    margin-top: 20%;
+    height: 30px;
+    width: 30px;
+    z-index: 99;
+    float: left;
+  }
+  .status-dnd:before {
+    content: " ";
+    width: 14px;
+    height: 4px;
+    margin: 6.9px 2px;
+    position: absolute;
+    border-bottom-color: var(--ui-profile-bg);
+    border-bottom-width: 0.3em;
+    border-bottom-style: solid;
+    border-radius: 4px;
+  }
+  .badges {
+    display: flex;
+    margin-top: 145px;
+    margin-left: 15px;
+    float: left;
+    background: var(--badge-bg);
+    border-radius: 3px;
+    padding: 2px;
+  }
+  .badge {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+  }
+  .user-info {
+    position: absolute;
+    margin: 65px 20px;
+    padding: 10px 15px;
+    margin-top: 35%;
+    width: 310px;
+    border-radius: 10px;
+    height: 300px;
+  }
+  .username {
+    font-weight: 700;
+    font-size: 21px;
+    color: #fff;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-bottom: -10px;
+  }
+  .content p {
+    margin: 10px -10px;
+    color: #d3d4d5;
+    font-size: 14px;
+    word-wrap: break-word;
+    max-height: 100px;
+  }
+
+  .content a {
+    color: #00a8ec;
+    text-decoration: none;
+  }
+
+  .emoji {
+    position: absolute;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    float: right;
+    margin-top: 7.5%;
+    margin-left: 80%;
+    transition: opacity 0.3s ease;
+  }
+  .emoji:hover img {
+    opacity: 0.8;
+  }
+  .message-content {
+    font-family: "UniSansSemiBold", sans-serif;
+    background: var(--ui-bg);
+    border-radius: 10px;
+    word-wrap: break-word;
+    margin-top: 20px;
+    margin-left: -10px;
+    color: #d3d4d5;
+    font-size: 15px;
+    height: 40%;
+    width: calc(150%);
+    padding-top: 10px;
+    padding-left: 10px;
+    max-height: 40px;
+    max-width: 300px;
+    resize: none;
+    border: 0;
+    outline: 0;
+  }
+  .message-content::-webkit-scrollbar {
+    opacity: 0;
+  }
+</style>
